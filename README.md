@@ -49,3 +49,7 @@ and include it in your page like any other file.
 [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/), so you
 can use it  with AMD module definitions as well as CommonJS. If none is
 available it defaults  to browser globals.
+
+# Developing
+Use `npm run build` for compiling `src/tags.es` into `dist/tags.js`. You'll need
+to run `npm install` first.
