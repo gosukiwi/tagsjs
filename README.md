@@ -1,7 +1,7 @@
-# jstags
+# tagsjs
 Human-friendly API for building DOM elements in JavaScript.
 
-Usage:
+# Usage
 
 ```javascript
 const title = tag.h1("I'm a title!")
@@ -26,3 +26,26 @@ tag.div({ class: "demo"}, () => [
     tag.p("Me too!")
 ])
 ```
+
+# Installation
+With npm:
+
+    npm install tagsjs
+
+With yarn:
+
+    yarn add tagsjs
+
+Rails:
+
+    TODO
+
+Manual:
+
+Just drop the `dist/tags.js` file somewhere in your project's `vendor` folder
+and include it in your page like any other file.
+
+`tags.js` uses
+[UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/), so you
+can use it  with AMD module definitions as well as CommonJS. If none is
+available it defaults  to browser globals.
