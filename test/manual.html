@@ -1,0 +1,13 @@
+<h1>Title</h1>
+<script type="text/javascript" src="../dist/tags.js"></script>
+<script type="text/javascript">
+document.body.appendChild(tag.div({ class: "potato", data: { potato: true } }, "Hello!"))
+
+const demoDiv = tag.div({ class: "demo"}, function () {
+  return [
+    tag.p("I'm inside a div!"),
+    tag.p("Me too!")
+  ]
+})
+document.body.appendChild(demoDiv)
+</script>

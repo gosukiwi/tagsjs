@@ -1,0 +1,40 @@
+{
+  "name": "tagsjs",
+  "version": "0.0.1",
+  "description": "Human-friendly API for generating DOM elements",
+  "main": "index.js",
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gosukiwi/tagsjs.git"
+  },
+  "keywords": [
+    "html",
+    "tags",
+    "dom",
+    "elements"
+  ],
+  "author": "Federico Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gosukiwi/tagsjs/issues"
+  },
+  "homepage": "https://github.com/gosukiwi/tagsjs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
