@@ -11,8 +11,9 @@
 }(function () {
   const jstags = {
     _createElement: function (tag, attributes, content) {
-      if (typeof attributes === 'string') {
+      if (typeof content === 'undefined') {
         content = attributes
+        attributes = undefined
       }
 
       const element = document.createElement(tag)

@@ -15,8 +15,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 })(function () {
   var jstags = {
     _createElement: function _createElement(tag, attributes, content) {
-      if (typeof attributes === 'string') {
+      if (typeof content === 'undefined') {
         content = attributes;
+        attributes = undefined;
       }
 
       var element = document.createElement(tag);
