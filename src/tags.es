@@ -10,15 +10,11 @@
   }
 }(function () {
   const jstags = {
-    _createElement: function (tag, attributes, content) {
-      if (typeof content === 'undefined') {
-        content = attributes
-        attributes = undefined
-      }
-
+    _createElement: function (tag, attributes, content, events) {
       const element = document.createElement(tag)
-      this._setElementContents(content, element)
       this._setElementAttributes(attributes, element)
+      this._setElementContents(content, element)
+      this._setElementEvents(events, element)
       return element
     },
 
@@ -52,6 +48,14 @@
           element.appendChild(content)
         }
       }
+    },
+
+    _setElementEvents: function (events, element) {
+      if (!events) return
+
+      Object.keys(events).forEach((name) => {
+        element.addEventListener(name, events[name])
+      })
     }
   }
 
@@ -73,8 +77,13 @@
   ]
 
   AVAILABLE_TAGS.forEach((tag) => {
-    jstags[tag] = function (attributes, content) {
-      return this._createElement(tag, attributes, content)
+    jstags[tag] = function (attributes, content, events) {
+      if (typeof content === 'undefined') { // when calling with a single argument
+        content = attributes
+        attributes = undefined
+      }
+
+      return this._createElement(tag, attributes, content, events)
     }
   })
 

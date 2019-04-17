@@ -25,6 +25,10 @@
       return tag.p("just a function")
     }))
 
+    document.body.appendChild(tag.div({}, "You can also attach events! Click me.", {
+      click: () => alert('click!')
+    }))
+
     </script>
   </body>
 </html>
