@@ -52,7 +52,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
 
       if (typeof content === 'string') {
-        element.textContent = content;
+        element.innerHTML = content;
       } else if (_typeof(content) === 'object') {
         if (Array.isArray(content)) {
           content.forEach(function (c) {

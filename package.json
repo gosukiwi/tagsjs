@@ -1,6 +1,6 @@
 {
   "name": "tagsjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Human-friendly API for generating DOM elements",
   "main": "index.js",
   "browserslist": "> 0.25%, not dead",

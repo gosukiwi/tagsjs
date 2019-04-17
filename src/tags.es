@@ -40,7 +40,7 @@
       }
 
       if (typeof content === 'string') {
-        element.textContent = content
+        element.innerHTML = content
       } else if (typeof content === 'object') {
         if (Array.isArray(content)) {
           content.forEach((c) => this._setElementContents(c, element))
